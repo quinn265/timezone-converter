@@ -83,6 +83,7 @@
     "step4": "查看结果",
     "popularTimezones": "热门时区",
     "laterThan": "晚于",
+    "earlierThan": "早于",
     "hours": "小时"
   }
 }

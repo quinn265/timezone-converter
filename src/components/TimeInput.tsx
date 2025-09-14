@@ -173,12 +173,14 @@ const TimeInput: React.FC<TimeInputProps> = ({ selectedTimezones, onTimeChange, 
                {convertedTime.time.format(format24h ? 'YYYY/M/D HH:mm' : 'YYYY/M/D h:mm A')}
              </div>
              <div className="result-info">
-               {t('stepByStep.laterThan')}{getTimezoneDisplayName(sourceTimezone).split('（')[0]} {(() => {
+               {(() => {
                  const sourceTime = moment.tz(inputDateTime, sourceTimezone);
                  const targetTime = convertedTime.time;
                  const diffHours = (targetTime.utcOffset() - sourceTime.utcOffset()) / 60;
-                 return Math.abs(diffHours);
-               })()} {t('stepByStep.hours')}
+                 const isLater = diffHours > 0;
+                 const absHours = Math.abs(diffHours);
+                 return `${isLater ? t('stepByStep.laterThan') : t('stepByStep.earlierThan')}${getTimezoneDisplayName(sourceTimezone).split('（')[0]} ${absHours} ${t('stepByStep.hours')}`;
+               })()}
              </div>
            </div>
          )}
