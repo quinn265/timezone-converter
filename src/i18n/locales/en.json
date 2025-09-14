@@ -39,6 +39,7 @@
     "Toronto": "Toronto"
   },
   "timezones": {
+    "UTC": "Coordinated Universal Time (UTC)",
     "America/New_York": "Eastern Time (New York)",
     "America/Los_Angeles": "Pacific Time (Los Angeles)",
     "America/Chicago": "Central Time (Chicago)",

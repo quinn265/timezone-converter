@@ -39,6 +39,7 @@
     "Toronto": "多伦多"
   },
   "timezones": {
+    "UTC": "协调世界时 (UTC)",
     "America/New_York": "东部时间 (纽约)",
     "America/Los_Angeles": "太平洋时间 (洛杉矶)",
     "America/Chicago": "中部时间 (芝加哥)",
