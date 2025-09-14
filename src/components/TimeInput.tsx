@@ -14,7 +14,7 @@ const TimeInput: React.FC<TimeInputProps> = ({ selectedTimezones, onTimeChange, 
   const { t } = useTranslation();
   const [inputDateTime, setInputDateTime] = useState('');
   const [sourceTimezone, setSourceTimezone] = useState('Asia/Shanghai');
-  const [targetTimezone, setTargetTimezone] = useState('America/New_York');
+  const [targetTimezone, setTargetTimezone] = useState('UTC');
   const [convertedTime, setConvertedTime] = useState<{ timezone: string; time: moment.Moment; abbreviation: string } | null>(null);
 
   useEffect(() => {
@@ -105,15 +105,15 @@ const TimeInput: React.FC<TimeInputProps> = ({ selectedTimezones, onTimeChange, 
             onChange={handleSourceTimezoneChange}
             className="timezone-dropdown"
           >
-            <option value="Asia/Shanghai">{t('timezones.Asia/Shanghai')}</option>
-            <option value="America/New_York">{t('timezones.America/New_York')}</option>
-            <option value="Europe/London">{t('timezones.Europe/London')}</option>
-            <option value="Asia/Tokyo">{t('timezones.Asia/Tokyo')}</option>
-            <option value="Australia/Sydney">{t('timezones.Australia/Sydney')}</option>
-            <option value="America/Los_Angeles">{t('timezones.America/Los_Angeles')}</option>
-            <option value="Europe/Paris">{t('timezones.Europe/Paris')}</option>
-            <option value="Asia/Dubai">{t('timezones.Asia/Dubai')}</option>
-            <option value="UTC">UTC</option>
+            <option value="Asia/Shanghai">CST - {t('timezones.Asia/Shanghai')}</option>
+            <option value="America/New_York">EST - {t('timezones.America/New_York')}</option>
+            <option value="Europe/London">GMT - {t('timezones.Europe/London')}</option>
+            <option value="Asia/Tokyo">JST - {t('timezones.Asia/Tokyo')}</option>
+            <option value="Australia/Sydney">AEDT - {t('timezones.Australia/Sydney')}</option>
+            <option value="America/Los_Angeles">PST - {t('timezones.America/Los_Angeles')}</option>
+            <option value="Europe/Paris">CET - {t('timezones.Europe/Paris')}</option>
+            <option value="Asia/Dubai">GST - {t('timezones.Asia/Dubai')}</option>
+            <option value="UTC">UTC - {t('timezones.UTC')}</option>
           </select>
         </div>
       </div>
@@ -148,15 +148,15 @@ const TimeInput: React.FC<TimeInputProps> = ({ selectedTimezones, onTimeChange, 
             onChange={handleTargetTimezoneChange}
             className="timezone-dropdown"
           >
-            <option value="Asia/Shanghai">{t('timezones.Asia/Shanghai')}</option>
-            <option value="America/New_York">{t('timezones.America/New_York')}</option>
-            <option value="Europe/London">{t('timezones.Europe/London')}</option>
-            <option value="Asia/Tokyo">{t('timezones.Asia/Tokyo')}</option>
-            <option value="Australia/Sydney">{t('timezones.Australia/Sydney')}</option>
-            <option value="America/Los_Angeles">{t('timezones.America/Los_Angeles')}</option>
-            <option value="Europe/Paris">{t('timezones.Europe/Paris')}</option>
-            <option value="Asia/Dubai">{t('timezones.Asia/Dubai')}</option>
-            <option value="UTC">UTC</option>
+            <option value="Asia/Shanghai">CST - {t('timezones.Asia/Shanghai')}</option>
+            <option value="America/New_York">EST - {t('timezones.America/New_York')}</option>
+            <option value="Europe/London">GMT - {t('timezones.Europe/London')}</option>
+            <option value="Asia/Tokyo">JST - {t('timezones.Asia/Tokyo')}</option>
+            <option value="Australia/Sydney">AEDT - {t('timezones.Australia/Sydney')}</option>
+            <option value="America/Los_Angeles">PST - {t('timezones.America/Los_Angeles')}</option>
+            <option value="Europe/Paris">CET - {t('timezones.Europe/Paris')}</option>
+            <option value="Asia/Dubai">GST - {t('timezones.Asia/Dubai')}</option>
+            <option value="UTC">UTC - {t('timezones.UTC')}</option>
           </select>
         </div>
       </div>
